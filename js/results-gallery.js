@@ -13,3 +13,11 @@ document.querySelectorAll('.row-image-button').forEach(button => {
     document.querySelector('.modal-close').focus();
   });
 });
+
+function closeResultsModal() {
+  resultsModal.classList.remove('open');
+  resultsModal.setAttribute('aria-hidden', 'true');
+}
+
+document.addEventListener('click', event => { if(event.target.closest('[data-close-modal]')) closeResultsModal(); });
+document.addEventListener('keydown', event => { if(event.key === 'Escape' && resultsModal.classList.contains('open')) closeResultsModal(); });

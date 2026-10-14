@@ -1,14 +1,16 @@
 const strategyGrid = document.querySelector('#strategy-grid');
 const strategyTabs = document.querySelectorAll('.strategy-tab');
-function renderStrategies(key='before'){ strategyGrid.innerHTML = portfolioData.strategies[key].map(([number,title,text]) => `<article class="strategy-card"><span class="card-number">${number}</span><h3>${title}</h3><p contenteditable="true">${text}</p></article>`).join(''); }
-strategyTabs.forEach(tab => tab.addEventListener('click', () => { strategyTabs.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected','false'); }); tab.classList.add('active'); tab.setAttribute('aria-selected','true'); strategyGrid.classList.remove('visible'); requestAnimationFrame(() => { renderStrategies(tab.dataset.tab); strategyGrid.classList.add('visible'); }); }));
+function renderStrategies(key='before'){ if(!strategyGrid)return; const descriptions=portfolioData.strategies[key].map(([,title,text]) => `${title}: ${text}`); strategyGrid.innerHTML = `<article class="strategy-word-block"><h3>${key === 'before' ? 'Before the test' : key === 'during' ? 'During the test' : 'After the test'}</h3><p contenteditable="true">${descriptions.join(' ')}</p></article>`; }
+strategyTabs.forEach(tab => tab.addEventListener('click', () => { strategyTabs.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected','false'); }); tab.classList.add('active'); tab.setAttribute('aria-selected','true'); renderStrategies(tab.dataset.tab); strategyGrid.classList.add('visible'); }));
 renderStrategies();
 const checklistItems = ['Review key concepts','Prepare materials and evidence','Complete a practice set','Plan time for rest','Set an intention for the exam'];
 const checklist = document.querySelector('#prep-checklist');
-checklist.innerHTML = checklistItems.map((item,index) => `<label><input type="checkbox" data-check="${index}"> <span>${item}</span></label>`).join('');
-const storedChecks = JSON.parse(localStorage.getItem('cindy-prep-checklist') || '[]');
-const updateChecks = () => { const boxes=[...checklist.querySelectorAll('input')]; const values=boxes.map(box=>box.checked); localStorage.setItem('cindy-prep-checklist', JSON.stringify(values)); document.querySelector('#check-count').textContent=`${values.filter(Boolean).length} / ${values.length}`; };
-checklist.querySelectorAll('input').forEach((box,index) => { box.checked=Boolean(storedChecks[index]); box.addEventListener('change', updateChecks); }); updateChecks();
+if(checklist){
+	checklist.innerHTML = checklistItems.map((item,index) => `<label><input type="checkbox" data-check="${index}"> <span>${item}</span></label>`).join('');
+	const storedChecks = JSON.parse(localStorage.getItem('cindy-prep-checklist') || '[]');
+	const updateChecks = () => { const boxes=[...checklist.querySelectorAll('input')]; const values=boxes.map(box=>box.checked); localStorage.setItem('cindy-prep-checklist', JSON.stringify(values)); document.querySelector('#check-count').textContent=`${values.filter(Boolean).length} / ${values.length}`; };
+	checklist.querySelectorAll('input').forEach((box,index) => { box.checked=Boolean(storedChecks[index]); box.addEventListener('change', updateChecks); }); updateChecks();
+}
 function validPercentage(record){ return Number.isFinite(record.score) && Number.isFinite(record.total) && record.total > 0 && record.score >= 0 ? (record.score / record.total) * 100 : null; }
 let activeFilter='all'; let searchText=''; let sortMode='date';
 const assessmentList=document.querySelector('#assessment-list');
