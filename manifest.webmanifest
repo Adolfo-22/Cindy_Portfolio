@@ -1,0 +1,19 @@
+{
+  "name": "My Learning Journey | Cindy Pearl E. Gonzaga",
+  "short_name": "Cindy Portfolio",
+  "description": "Cindy Pearl E. Gonzaga's ISED 2 e-portfolio.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffad3",
+  "theme_color": "#ffb1b1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/profile/profile2.png",
+      "sizes": "767x1080",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

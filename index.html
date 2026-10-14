@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="img/profile/profile1.jpg">
+  <link rel="icon" type="image/png" href="img/profile/profile2.png">
+  <link rel="apple-touch-icon" href="img/profile/profile2.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#ffb1b1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/strategy-carousel.css">
@@ -19,8 +22,11 @@
   <link rel="stylesheet" href="css/online-results.css">
   <link rel="stylesheet" href="css/hero-portrait.css">
   <link rel="stylesheet" href="css/profile-portrait.css">
-  <link rel="stylesheet" href="css/strategy-words.css">
   <link rel="stylesheet" href="css/reflection-status.css">
+  <link rel="stylesheet" href="css/growth-reflection.css">
+  <link rel="stylesheet" href="css/growth-reflection-overrides.css">
+  <link rel="stylesheet" href="css/reflection-modal.css">
+  <link rel="stylesheet" href="css/reflection-modal-overrides.css">
   <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
@@ -46,7 +52,6 @@
       <div class="hero-visual reveal reveal-delay">
         <div class="hero-note note-one">learn<br><span>with purpose</span></div>
         <div class="portrait-frame"><div class="portrait-placeholder"><img src="img/profile/profile2.png" alt="Portrait of Cindy Pearl E. Gonzaga"></div><div class="portrait-caption"><span>01</span><strong>an aspiring<br>educator</strong></div></div>
-        <div class="hero-stamp"><span>reflect</span><b>✳</b><span>refine</span></div>
       </div>
       <div class="hero-bottom"><span>scroll to explore</span><span class="scroll-line"></span><span>2024 — 2025</span></div>
     </section>
@@ -66,16 +71,14 @@
       <div class="strategy-story reveal" id="strategy-story">
         <div class="strategy-carousel" aria-label="Test-taking strategy moments">
           <div class="carousel-track" id="carousel-track">
-            <figure class="carousel-slide active"><img src="img/test-taking/test-taking1.jpg" alt="Cindy's test-taking preparation image one"><figcaption><span>01 / before the test</span><strong>Prepare with purpose.</strong></figcaption></figure>
-            <figure class="carousel-slide"><img src="img/test-taking/test-taking2.jpg" alt="Cindy's test-taking preparation image two"><figcaption><span>02 / during the test</span><strong>Stay focused in the moment.</strong></figcaption></figure>
-            <figure class="carousel-slide"><img src="img/test-taking/test-taking3.jpg" alt="Cindy's test-taking preparation image three"><figcaption><span>03 / after the test</span><strong>Reflect, refine, and grow.</strong></figcaption></figure>
+            <figure class="carousel-slide active"><img src="img/test-taking/test-taking1.jpg" alt="Cindy's test-taking preparation image one"><figcaption><span></span><strong>Prepare with purpose.</strong></figcaption></figure>
+            <figure class="carousel-slide"><img src="img/test-taking/test-taking2.jpg" alt="Cindy's test-taking preparation image two"><figcaption><span></span><strong>Stay focused in the moment.</strong></figcaption></figure>
+            <figure class="carousel-slide"><img src="img/test-taking/test-taking3.jpg" alt="Cindy's test-taking preparation image three"><figcaption><span></span><strong>Reflect, refine, and grow.</strong></figcaption></figure>
           </div>
           <div class="carousel-controls"><button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Previous strategy image">←</button><div class="carousel-dots" id="carousel-dots"><button class="carousel-dot active" type="button" aria-label="Show strategy image 1" aria-current="true"></button><button class="carousel-dot" type="button" aria-label="Show strategy image 2"></button><button class="carousel-dot" type="button" aria-label="Show strategy image 3"></button></div><button class="carousel-arrow" id="carousel-next" type="button" aria-label="Next strategy image">→</button></div>
         </div>
         <div class="strategy-story-copy"><p class="label coral-label">My approach to examinations</p><h3>Learning is more than a score.</h3><p>Before a test, I review my notes, focus on important lessons, and manage my time to prepare well. I try to understand the topics rather than simply memorize them. Although I sometimes feel nervous, I remind myself to stay focused and trust the effort I have given.</p><p>During a test, I carefully read each question, answer the easiest ones first, and use the elimination method when I am unsure. I also manage my time wisely and remain calm so I can think clearly.</p><p>These strategies help me become more confident, disciplined, and responsible as a learner. I believe that tests are not only about getting high scores but also about discovering what I know and what I still need to improve.</p><blockquote>Every examination is an opportunity to learn, grow, and become better — not only as a student but also as a future teacher.</blockquote></div>
       </div>
-      <div class="strategy-tabs" role="tablist" aria-label="Test-taking phases"><button class="strategy-tab active" role="tab" aria-selected="true" data-tab="before">Before the test</button><button class="strategy-tab" role="tab" aria-selected="false" data-tab="during">During the test</button><button class="strategy-tab" role="tab" aria-selected="false" data-tab="after">After the test</button></div>
-      <div class="strategy-words" id="strategy-grid"></div>
     </section>
 
     <section class="section-shell results-section" id="results">
@@ -104,12 +107,13 @@
 
     <section class="section-shell reflection-section final-section" id="final"><div class="section-intro split-intro reveal"><div><p class="eyebrow">05 / look back, look ahead</p><h2>Final Term<br><em>Reflection</em></h2></div><p class="section-subtitle">Growth, progress, and readiness for the teaching profession.</p></div><div class="reflection-pending reveal"><span class="pending-mark">—</span><div><p class="label">Status update</p><h3>Final-term reflection not yet available</h3><p>This space will be completed after the final-term assessments and personal reflection are finished.</p></div></div></section>
 
-    <section class="section-shell goals-section"><div class="progress-summary"><div class="summary-lead"><p class="eyebrow">06 / keep becoming</p><h2>Small steps,<br><em>steady growth.</em></h2><p>Learning is not a finished checklist. It is a practice I return to with curiosity and care.</p></div><div class="summary-stats"><div><strong id="strategy-count">0</strong><span>strategies explored</span></div><div><strong id="assessment-count">0</strong><span>assessments documented</span></div><div><strong>2</strong><span>reflection spaces</span></div></div></div></section>
+    <section class="section-shell goals-section"><div class="progress-summary growth-layout"><div class="summary-lead"><p class="eyebrow">06 / keep becoming</p><h2>Small steps,<br><em>steady growth.</em></h2><p>I will keep showing up, keep learning, and keep becoming—not all at once, but one small step at a time.</p></div><aside class="growth-reflection"><div class="reflection-preview"><p>Looking back on my learning journey, I realized that growth does not always happen in big and noticeable ways. Sometimes, it happens through small steps, quiet realizations, mistakes, and lessons that help us become better versions of ourselves.</p><p>Throughout this experience, I discovered strategies that helped me understand lessons better and recognize the ways I learn best. I also learned that challenges and mistakes are not signs of failure but opportunities to grow.</p></div><details><summary>View all reflection</summary><div class="reflection-full"><p>Looking back on my learning journey, I realized that growth does not always happen in big and noticeable ways. Sometimes, it happens through small steps, quiet realizations, mistakes, and lessons that help us become better versions of ourselves. This journey has taught me that learning is not about being perfect or knowing everything, but about being willing to learn, improve, and try again.</p><p>Throughout this experience, I discovered strategies that helped me understand lessons better and recognize the ways I learn best. I also learned that challenges and mistakes are not signs of failure but opportunities to grow. Every experience, whether successful or difficult, has taught me something valuable about myself as a learner.</p><p>More than the knowledge I gained, I am grateful for the patience, discipline, and confidence I continue to develop. I know that I still have so much to learn, and there will be moments when I feel uncertain or struggle to understand. However, I want to remind myself that progress takes time, and every small effort matters.</p><p>As I continue my journey as a student and future educator, I carry with me the belief that learning is a continuous process. I may not have everything figured out today, but I am proud of how far I have come and hopeful for how far I can go. I will continue to approach every lesson with curiosity, every challenge with courage, and every opportunity with an open heart.</p><p><strong>This is not the end of my learning journey. It is another beginning.</strong> I will keep showing up, keep learning, and keep becoming—not all at once, but one small step at a time. Because in the end, meaningful growth is not about how quickly I reach my destination, but about who I become along the way.</p></div></details></aside></div></section>
   </main>
 
   <footer class="site-footer"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">CP</span><span>Learning<br><em>journey</em></span></a><p>Learning, reflecting, and growing toward the teaching profession.</p></div><div class="footer-details"><p><strong>ISED 2</strong><br>Seminar in Professional Education</p><p><strong id="footer-name">Cindy Pearl E. Gonzaga</strong><br>Bukidnon State University · 2026/2027</p></div><div class="footer-links"><a href="#about">About</a><a href="#strategies">Strategies</a><a href="#results">Results</a><a href="#midterm">Reflections</a></div></footer>
   <button class="back-top" id="back-top" type="button" aria-label="Back to top">↑</button>
   <div class="modal" id="evidence-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-backdrop" data-close-modal onclick="document.getElementById('evidence-modal').classList.remove('open');document.getElementById('evidence-modal').setAttribute('aria-hidden','true')"></div><div class="modal-card"><button class="modal-close" data-close-modal onclick="document.getElementById('evidence-modal').classList.remove('open');document.getElementById('evidence-modal').setAttribute('aria-hidden','true')" aria-label="Close evidence viewer">×</button><p class="label">Evidence viewer</p><h2 id="modal-title">Assessment evidence</h2><div class="modal-preview" id="modal-preview"></div><p id="modal-score"></p></div></div>
-  <script src="js/data.js"></script><script src="js/navigation.js"></script><script src="js/assessments.js"></script><script src="js/strategy-carousel.js"></script><script src="js/animations.js"></script><script src="js/main.js"></script><script src="js/results-gallery.js"></script>
+  <div class="modal reflection-modal" id="reflection-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reflection-modal-title"><div class="modal-backdrop" data-reflection-close></div><div class="modal-card reflection-modal-card"><button class="modal-close" data-reflection-close aria-label="Close reflection viewer">×</button><p class="label coral-label">Learning journey</p><h2 id="reflection-modal-title">My reflection</h2><div id="reflection-modal-content"></div></div></div>
+  <script src="js/data.js"></script><script src="js/navigation.js"></script><script src="js/assessments.js"></script><script src="js/strategy-carousel.js"></script><script src="js/animations.js"></script><script src="js/main.js"></script><script src="js/results-gallery.js"></script><script src="js/growth-reflection.js"></script>
 </body>
 </html>
