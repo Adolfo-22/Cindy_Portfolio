@@ -1,0 +1,1 @@
+.portrait-frame{transform:rotate(4deg) translateY(-18px)}.portrait-placeholder{background:var(--peach)}.portrait-placeholder img{object-fit:contain!important;object-position:center top!important}@media(max-width:768px){.portrait-frame{transform:rotate(4deg) translateY(-10px)}}
